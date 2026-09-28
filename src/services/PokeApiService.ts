@@ -33,7 +33,12 @@ async function buscarPokemon(nomeOuId: string): Promise<PokemonResumo | null>{
         return pokemon;
         
     } catch (error) {
-        console.log("Erro aos buscar o Pokémon: ", error)
+        if (error instanceof PokemonNotFoundError) {
+        console.log(error.message);
+        return null;
+    }
+
+        console.log("Erro ao consultar a PokeAPI:", error);
         return null;
     }
 }
