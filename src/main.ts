@@ -8,6 +8,7 @@ async function executar(): Promise<void>{
     const catalogo = new CatalogoPokemon;
 
     try {
+        await catalogo.carregar();
         let executando = true;
 
         while(executando){
@@ -16,11 +17,11 @@ async function executar(): Promise<void>{
 
             switch (opcao){
                 case "1": {
-                    const nomeOuId = await terminal.perguntar("Nmoe ou ID: ");
+                    const nomeOuId = await terminal.perguntar("Nome ou ID: ");
                     const pokemon = await buscarPokemon(nomeOuId);
 
                     if(pokemon){
-                        catalogo.adicionar(pokemon);
+                        await catalogo.adicionar(pokemon);
                     }
                     break;
                 }
@@ -38,7 +39,7 @@ async function executar(): Promise<void>{
                         break;
                     }
 
-                    catalogo.remover(id);
+                    await catalogo.remover(id);
                     break;
                 }
 

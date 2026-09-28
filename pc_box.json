@@ -1,0 +1,21 @@
+[
+  {
+    "id": 3,
+    "nome": "venusaur",
+    "tipos": [
+      "grass",
+      "poison"
+    ],
+    "altura": 20,
+    "peso": 1000
+  },
+  {
+    "id": 9,
+    "nome": "blastoise",
+    "tipos": [
+      "water"
+    ],
+    "altura": 16,
+    "peso": 855
+  }
+]

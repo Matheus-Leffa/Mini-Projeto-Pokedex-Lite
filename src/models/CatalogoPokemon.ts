@@ -1,9 +1,14 @@
 import { PokemonResumo } from "./Pokemon";
+import { carregarPokemons, salvarPokemons } from "../services/BoxService";
 
 class CatalogoPokemon{
     private pokemons: PokemonResumo[] = [];
 
-    adicionar(pokemon: PokemonResumo): void {
+    async carregar(): Promise<void> {
+      this.pokemons = await carregarPokemons();
+    }
+
+    async adicionar(pokemon: PokemonResumo): Promise<void> {
         const jaExiste = this.pokemons.some((item) => item.id === pokemon.id);
 
         if(jaExiste){
@@ -12,6 +17,7 @@ class CatalogoPokemon{
         }
 
         this.pokemons.push(pokemon);
+        await salvarPokemons(this.pokemons);
         console.log(`${pokemon.nome} adicionado ao catálogo.`);
     }
 
@@ -28,7 +34,7 @@ class CatalogoPokemon{
     });
   }
 
-    remover(id: number): void {
+    async remover(id: number): Promise<void> {
     const existe = this.pokemons.some((pokemon) => pokemon.id === id);
 
     if (!existe) {
@@ -37,6 +43,7 @@ class CatalogoPokemon{
     }
 
     this.pokemons = this.pokemons.filter((pokemon) => pokemon.id !== id);
+  await salvarPokemons(this.pokemons);
     console.log("Pokémon removido do catálogo.");
   }
 }
