@@ -1,3 +1,6 @@
-const mensagem: string = "Olá, mundo!";
+import { buscarPokemon } from "./services/PokeApiService";
 
-console.log(mensagem); 
+console.log("Início programa");
+
+const pokemon = buscarPokemon("2");
+
