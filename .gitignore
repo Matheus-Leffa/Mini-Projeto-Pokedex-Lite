@@ -1,5 +1,6 @@
 node_modules/
 dist/
+GUIA_IMPLEMENTACAO.md
 
 # Local environment and secrets
 .env
