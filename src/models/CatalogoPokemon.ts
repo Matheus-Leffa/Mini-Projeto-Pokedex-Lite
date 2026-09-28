@@ -3,7 +3,7 @@ import { PokemonResumo } from "./Pokemon";
 class CatalogoPokemon{
     private pokemons: PokemonResumo[] = [];
 
-    adicionar(pokemon: PokemonResumo): void {
+    private adicionar(pokemon: PokemonResumo): void {
         const jaExiste = this.pokemons.some((item) => item.id === pokemon.id);
 
         if(jaExiste){
@@ -15,7 +15,7 @@ class CatalogoPokemon{
         console.log(`${pokemon.nome} adicionado ao catálogo.`);
     }
 
-    listar(): void {
+    private listar(): void {
     if (this.pokemons.length === 0) {
       console.log("Catálogo vazio.");
       return;
@@ -28,7 +28,7 @@ class CatalogoPokemon{
     });
   }
 
-  remover(id: number): void {
+  private remover(id: number): void {
     const existe = this.pokemons.some((pokemon) => pokemon.id === id);
 
     if (!existe) {
