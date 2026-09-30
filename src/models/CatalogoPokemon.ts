@@ -29,7 +29,7 @@ class CatalogoPokemon{
 
     this.pokemons.forEach((pokemon) => {
       console.log(
-        `#${pokemon.id} - ${pokemon.nome} | Tipos: ${pokemon.tipos.join(", ")}`
+        `#${pokemon.id} - ${pokemon.nome} | Tipos: ${pokemon.tipos.join(", ")} | Altura: ${pokemon.altura} | Peso: ${pokemon.peso}`
       );
     });
   }
