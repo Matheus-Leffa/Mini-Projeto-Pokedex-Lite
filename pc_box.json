@@ -8,5 +8,15 @@
     ],
     "altura": 20,
     "peso": 1000
+  },
+  {
+    "id": 2,
+    "nome": "ivysaur",
+    "tipos": [
+      "grass",
+      "poison"
+    ],
+    "altura": 10,
+    "peso": 130
   }
 ]
