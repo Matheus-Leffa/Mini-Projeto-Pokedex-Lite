@@ -153,3 +153,7 @@ https://trello.com/invite/b/6ab7c77d411df856d02d2645/ATTI9b0e4d9bc9a3061ba79a756
 - `develop`: branch de desenvolvimento e integração das alterações.
 - `feat/pokedex`: branch utilizada para o desenvolvimento das funcionalidades da Pokédex.
 - `docs/readme`: branch utilizada para a criação e atualização da documentação do projeto.
+
+## 12. Link para vídeo de apresentação do projeto
+
+https://drive.google.com/drive/folders/1xdIrs5NKaacHzvNlveOODnF8TDyAEeSy?usp=sharing
